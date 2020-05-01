@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+   <meta name="author" content="maghozistudio" />
+   <title>Noansa Studio</title>
+
+   <!-- Meta tag for thumbnails -->
+   <meta property="og:title" content="Noansa Studio" />
+   <meta property="og:url" content="https://noansa.netlify.app/" />
+   <meta property="og:description" content="Noansa Studio | Design for future">
+   <meta property="og:image" content="https://i.ibb.co/d7HcxDM/Group-22.png">
+   <meta property="og:type" content="Official Studio Website" />
+
+   <!-- Favicon -->
+   <link rel="icon" href="assets/favicon.ico" type="image/ico" />
+
+   <!-- jQuery load first -->
+   <script src="assets/js/jquery.min.js"></script>
+
+   <!-- CSS Files -->
+   <style>
+      @import url("assets/css/bootstrap.min.css");
+      @import url("assets/css/all.min.css");
+      @import url("assets/css/external.css");
+      @import url("assets/css/datepicker.css");
+      @import url("assets/css/bootstrap-select.min.css");
+      @import url("assets/css/style.css");
+   </style>
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="150">
+   <div class="container">
+      <div class="header-wrapper text-center">
+         <div class="row h-heading">
+            <div class="col-md-12 align-self-center">
+               <div class="sucess-wrapper">
+                  <img src="assets/images/success.svg" alt="images">
+                  <h2>Thanks for your interest.</h2>
+                  <p>A representative will contact you soon.</p>
+                  <a href="noansa.netlify.app" class="btn btn-noansa">Return to site</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="assets/js/popper.js"></script>
+      <script src="assets/js/bootstrap.min.js"></script>
+      <script src="assets/js/bootstrap-datepicker.js"></script>
+      <script src="assets/js/bootstrap-select.min.js"></script>
+      <script>
+         $(function () {
+            $('#datepicker').datepicker({
+               clearBtn: true,
+               format: "dd-mm-yyyy"
+            });
+            $('select').selectpicker();
+         });
+      </script>
+
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+   <meta name="author" content="maghozistudio" />
+   <title>Noansa Studio</title>
+
+   <!-- Meta tag for thumbnails -->
+   <meta property="og:title" content="Noansa Studio" />
+   <meta property="og:url" content="https://noansa.netlify.app/" />
+   <meta property="og:description" content="Noansa Studio | Design for future">
+   <meta property="og:image" content="https://i.ibb.co/d7HcxDM/Group-22.png">
+   <meta property="og:type" content="Official Studio Website" />
+
+   <!-- Favicon -->
+   <link rel="icon" href="assets/favicon.ico" type="image/ico" />
+
+   <!-- jQuery load first -->
+   <script src="assets/js/jquery.min.js"></script>
+
+   <!-- CSS Files -->
+   <style>
+      @import url("assets/css/bootstrap.min.css");
+      @import url("assets/css/all.min.css");
+      @import url("assets/css/external.css");
+      @import url("assets/css/datepicker.css");
+      @import url("assets/css/bootstrap-select.min.css");
+      @import url("assets/css/style.css");
+   </style>
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="150">
+
+   <div class="contact-form">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <img src="assets/images/logo.svg" alt="logo" alt="images">
+            </div>
+            <div class="col-md-12">
+               <div class="talk-mobile">
+                  <h2>Hello, <span>let’s talk</span></h2>
+                  <p>Interested in working with us?<br>We’d love to hear from you.</p>
+               </div>
+            </div>
+         </div>
+         <div class="row">
+            <div class="col-md-12">
+               <?= form_open("send_data_contact")?>
+               <div class="row">
+                  <div class="col-sm-12">
+                     <?php echo $this->session->flashdata('fail_send_data'); ?>
+                  </div>
+                  <div class="col-sm-6">
+                     <div class="form-group">
+                        <label>Your name*</label>
+                        <input type="text" class="form-control form-input-text" name="name" required
+                           placeholder="e.g Julia William">
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <div class="form-group">
+                        <label>Company name*</label>
+                        <input type="text" class="form-control form-input-text" name="company" required
+                           placeholder="e.g Noa corp">
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <div class="form-group">
+                        <label>The scope of project*</label>
+                        <select class="form-control form-input-text" name="scope" required>
+                           <option hidden selected disabled>e.g Design</option>
+                           <option value="1">Mobile Apps</option>
+                           <option value="2">Website</option>
+                           <option value="3">Illustration</option>
+                           <option value="4">Branding</option>
+                           <option value="5">Development</option>
+                        </select>
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <div class="form-group">
+                        <label>Deadline estimation</label>
+                        <input type="text" placeholder="e.g 10-01-2020" name="deadline"
+                           class="form-control form-input-text" id="datepicker">
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <div class="form-group">
+                        <label>The Budget*</label>
+                        <select class="form-control form-input-text" name="budget" required>
+                           <option hidden selected disabled>e.g > $1000</option>
+                           <option value="1">&lt;$1000</option>
+                           <option value="2">$1000 - $5000</option>
+                           <option value=3>&gt;$5000</option>
+                        </select>
+                     </div>
+                  </div>
+                  <div class="col-sm-6">
+                     <div class="form-group">
+                        <label>Your email*</label>
+                        <input type="email" class="form-control form-input-text" name="email" required
+                           placeholder="e.g youemail@you.com">
+                     </div>
+                  </div>
+                  <div class="col-sm-12">
+                     <div class="form-group">
+                        <label>Additional Info*</label>
+                        <textarea class="form-control form-input-text" style="resize: none;" name="additional" rows="5"
+                           required placeholder="Optionally, sharing more about the project"></textarea>
+                     </div>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="footer-contact">
+                        <span>Need NDA first? E-mail us<br>at <a
+                              href="mailto:hello@noansa.co">hello@noansa.co</a></span>
+                        <div class="text-center">
+                           <!-- <button type="submit" class="btn btn-noansa btn-block">Send Us</button> -->
+                           <a href="success-page.html" class="btn btn-noansa btn-block">Send Us</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               </form>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="assets/js/popper.js"></script>
+   <script src="assets/js/bootstrap.min.js"></script>
+   <script src="assets/js/bootstrap-datepicker.js"></script>
+   <script src="assets/js/bootstrap-select.min.js"></script>
+   <script>
+      $(function () {
+         $('#datepicker').datepicker({
+            clearBtn: true,
+            format: "dd-mm-yyyy"
+         });
+         $('select').selectpicker();
+      });
+   </script>
+
+</body>
+
+</html>
